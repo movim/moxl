@@ -32,12 +32,12 @@ class Unavaiable extends Action
     private $_status;
     private $_to;
     private $_type;
-    private $_ressource;
+    private $_resource;
 
     public function request() 
     {
         $this->store();
-        Presence::unavaiable($this->_to.'/'.$this->_ressource, $this->_status, $this->_type);
+        Presence::unavaiable($this->_to.'/'.$this->_resource, $this->_status, $this->_type);
     }
 
     public function setStatus($status)
@@ -52,9 +52,9 @@ class Unavaiable extends Action
         return $this;
     }
     
-    public function setRessource($ressource)
+    public function setResource($resource)
     {
-        $this->_ressource = $ressource;
+        $this->_resource = $resource;
         return $this;
     }
     
