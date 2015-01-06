@@ -36,7 +36,7 @@ class API {
         return '
             <iq
                 id="'.$session->id.'"
-                from="'.$session->user.'@'.$session->host.'/'.$session->ressource.'"
+                from="'.$session->user.'@'.$session->host.'/'.$session->resource.'"
                 xml:lang="'.$language.'"
                 xmlns="jabber:client"
                 '.$toxml.'
@@ -118,7 +118,7 @@ class API {
                 return $return;
 
             Auth::restartRequest();
-            $return = Auth::ressourceRequest();
+            $return = Auth::resourceRequest();
 
             if($return != 'OK')
                 return $return;
